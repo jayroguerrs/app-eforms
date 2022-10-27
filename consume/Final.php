@@ -1,7 +1,7 @@
 <?php 
 
 
-$webservice_url = "http://svsiwnapdev01/wsSecurity/WebServicesSecurity.asmx";
+$webservice_url = "http://svsiwnapdev01/wsSecurity/WebServicesSecurity.asmx?WSDL";
 
 $user = 'jguerreros';
 $psw = 'enfermeria2021';
@@ -29,6 +29,15 @@ $request_param = '<?xml version="1.0" encoding="utf-8"?>
   </soap:Body>
 </soap:Envelope>';
 
+$myXMLData =
+'<?xml version="1.0" encoding="utf-8"?>
+<note>
+<to>Tove</to>
+<from>Jani</from>
+<heading>Reminder</heading>
+<body>Dont forget me this weekend!</body>
+</note>';
+
 
 $headers = array(
     'Content-Type: text/xml; charset=utf-8',
@@ -54,7 +63,11 @@ if ($result === FALSE) {
 
 curl_close ($ch);
 
+//$data = json_encode($data);
 echo $data;
+
+echo strpos($data, "USUARIO");
+echo strpos($data, " ");
 
 
 #$data . ' tiene que salir';
