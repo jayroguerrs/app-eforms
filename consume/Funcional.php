@@ -24,6 +24,8 @@ $EEResponse = $decode['EEResponse'];
 echo $EEResponse;
 */
 
+echo $data;
+
 $getdata = json_decode($data,true);
 
 echo $getdata['EEResponse']['status'] ; 
