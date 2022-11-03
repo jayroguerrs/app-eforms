@@ -1,6 +1,6 @@
 <?php
   
-  $url = "http://svsiwnapdev01/wsSecurity/WebServicesSecurity.asmx?WSDL";
+  $url = "http://svsiwnapdev01.crp.com.pe/wsSecurity/WebServicesSecurity.asmx?WSDL";
   $user = 'jguerreros';
   $psw = 'enfermeria2021';
   $num = '19';
